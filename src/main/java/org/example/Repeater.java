@@ -17,5 +17,6 @@ public class Repeater extends Handler {
     private void changeProgram(Bid bid) {
         if (bid.getLoanAmount() > 50001) bid.setLoanAmount(50000);
         if (bid.getLoanAmount() > 10001) bid.setLoanAmount(10000);
+        if (bid.getLoanAmount() > 1001) bid.setLoanAmount(1000);
     }
 }

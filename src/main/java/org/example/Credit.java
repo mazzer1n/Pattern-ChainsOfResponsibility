@@ -22,8 +22,10 @@ public class Credit extends Handler {
             return (bid.getAge() >= 21) && (bid.getWorkPeriodInMonths() > 23) && (!bid.isLoansOverdue()) && clientFactor() && bid.getIncomePerMonth() > 9999;
         } else if (bid.getLoanAmount() > 10001) {
             return (bid.getAge() >= 18) && (bid.getWorkPeriodInMonths() > 10) && clientFactor() && bid.getIncomePerMonth() > 1000;
-        } else {
+        } else if (bid.getLoanAmount() > 1001) {
             return bid.isWithPledge();
+        } else {
+            return clientFactor();
         }
     }
 

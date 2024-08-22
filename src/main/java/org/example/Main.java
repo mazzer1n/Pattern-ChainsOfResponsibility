@@ -10,7 +10,7 @@ public class Main {
                 .bind(new Credit("GammaBank"))
                 .bind(handler);
 
-        Bid bid = new Bid(100000, true, 18, 100, false, 34 );
+        Bid bid = new Bid(100000, false, 18, 100, false, 34 );
         handler.handle(bid);
     }
 }
